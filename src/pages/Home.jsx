@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+
 // components
 import Header from '../components/Header'
+import RepositoryDetails from '../components/RepositoryDetails'
+
 // functions
 import { getRepoData, getCommitsData } from '../utils/getData'
 
@@ -53,7 +56,11 @@ const Home = () => {
       <Header />
       {state.loading && <h2>Loading...</h2>}
       {state.error && <h1>{state.error}</h1>}
-      <h1>Home</h1>
+      {state.repo && (
+        <RepositoryDetails
+          repo={state.repo}
+        />
+      )}
     </>
   )
 }

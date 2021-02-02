@@ -1,2 +1,9 @@
+/* fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
 /* variables y estilos globales */
 @import './Golbals.css';
+
+/* componentes */
+@import './components/Header.css';
+

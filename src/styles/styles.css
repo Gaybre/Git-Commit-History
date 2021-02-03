@@ -7,5 +7,6 @@
 /* componentes */
 @import './components/Header.css';
 @import './components/RepositoryDetails.css';
+@import './components/CommitItem.css';
 
 

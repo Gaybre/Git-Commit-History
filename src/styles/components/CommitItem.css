@@ -9,6 +9,17 @@
   box-shadow: -2px 2px 8px var(--tertiary-color);
 }
 
+.commit__color {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  bottom: 2px;
+  width: 8px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: var(--secondary-color);
+}
+
 .commit__hash {
   position: absolute;
   top: var(--spacing-medium);
@@ -16,8 +27,17 @@
   padding: calc(var(--spacing-small) /2);
   border: 2px solid var(--secondary-color);
   border-radius: calc(var(--border-radius) /2);
-  color: var(--tertiary-color);
   background-color: var(--transparent-secondary-color);
+}
+
+.commit__hash a {
+  color: var(--tertiary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.commit__hash a:hover {
+  text-decoration: underline;
 }
 
 .commit__author {
@@ -41,7 +61,7 @@
 }
 
 .commit__message p {
-  margin-top: var(--spacing-small);
+  margin-top: var(--spacing-medium);
 }
 
 /* tablet */
@@ -54,7 +74,11 @@
     font-size: .9rem;
   }
 
-  .commit__hash h4 {
+  .commit__hash {
+    right: var(--spacing-small);
+  }
+
+  .commit__hash a {
     font-size: .8rem;
   }
 
@@ -69,6 +93,16 @@
 
 /* phone */
 @media screen and (max-width: 650px) {
+  .commit__color {
+    top: 4px;
+    bottom: 4px;
+    width: 6px;
+  }
+
+  .commit__hash a {
+    font-size: .8rem;
+  }
+
   .commit__message p:nth-child(1) {
     margin-top: var(--spacing-large);
   }

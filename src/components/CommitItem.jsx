@@ -3,11 +3,14 @@ import React from 'react'
 const CommitItem = ({commit}) => {
   return(
     <article className="commit">
+      <div className="commit__color" />
       <div className="commit__hash">
-        <h4>{commit.sha}</h4>
+        <a href={commit.html_url} target="_blank">
+          {commit.sha}
+        </a>
       </div>
       <div className="commit__author">
-        <a href={commit.html_url}>
+        <a href={commit.author.html_url} target="_blank">
           <img
             src={commit.author.avatar_url}
             alt="owner-repository-avatar"

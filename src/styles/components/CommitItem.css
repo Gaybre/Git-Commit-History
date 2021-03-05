@@ -41,6 +41,7 @@
 }
 
 .commit__author {
+  align-self: flex-start;
   margin-right: var(--spacing-medium);
   text-align: center;
 }
@@ -60,8 +61,8 @@
   border-radius: 50%;
 }
 
-.commit__message p {
-  margin-top: var(--spacing-medium);
+.commit__message p:nth-child(1) {
+  margin: var(--spacing-medium) 0;
 }
 
 /* tablet */

@@ -1,6 +1,16 @@
 import React from 'react'
 
 const CommitItem = ({commit}) => {
+
+  const bodyCommit = () => {
+    const commitSplit = commit.commit.message.split('*')
+    return commitSplit.map(line => (
+      line === commitSplit[0]
+      ? <p key={line}><strong>{line}</strong></p>
+      : <p key={line}>{`* ${line}`}</p>
+    ))
+  }
+
   return(
     <article className="commit">
       <div className="commit__color" />
@@ -20,7 +30,7 @@ const CommitItem = ({commit}) => {
       </div>
       <div className="commit__message">
         <p>Fecha: {commit.commit.committer.date}</p>
-        <p>{commit.commit.message}</p>
+        {bodyCommit()}
       </div>
     </article>
   )

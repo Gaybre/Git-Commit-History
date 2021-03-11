@@ -52,7 +52,6 @@ const Home = () => {
   }
 
   return (
-    console.log(state.commits),
     <>
       <Header />
       {state.loading && <h2>Loading...</h2>}

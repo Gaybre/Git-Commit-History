@@ -13,8 +13,6 @@ const CommitList = ({commits}) => {
   ))
 
   return(
-    console.log('typeOf', typeof(commits)),
-    console.log('commits',commits),
     <section className="wrapper">
       {getAllCommits()}
     </section>

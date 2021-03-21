@@ -4,6 +4,7 @@ import CommitList from '../components/CommitList'
 // components
 import Header from '../components/Header'
 import RepositoryDetails from '../components/RepositoryDetails'
+import Loader from '../components/Loader'
 
 // functions
 import { getRepoData, getCommitsData } from '../utils/getData'
@@ -54,7 +55,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      {state.loading && <h2>Loading...</h2>}
+      {state.loading && <Loader />}
       {state.error && <h1>{state.error}</h1>}
       {state.repo && (
         <>
